@@ -1,0 +1,331 @@
+/* --- ТАБЛИЦА СТИЛЕЙ И СБРОС --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F6EFE9; /* Нежный пудровый цвет фона из Figma */
+    color: #4A3B32;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .thanks-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* --- 1. СЕКЦИЯ С ХАОТИЧНЫМИ ПОЛАРОИДАМИ (TOP HERO) --- */
+.gallery-hero {
+    min-height: 95vh;
+    background-color: #EFE6DD;
+    position: relative;
+    padding: 6rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-bg-overlay {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.main-gallery-title {
+    font-size: 5rem;
+    color: #A98A72;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 5;
+    margin-bottom: 3rem;
+}
+
+.scattered-grid {
+    position: relative;
+    height: 450px;
+    margin-bottom: 2rem;
+}
+
+.polaroid {
+    background: #ffffff;
+    padding: 10px 10px 25px 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    position: absolute;
+    width: 180px;
+    transition: transform 0.3s;
+}
+
+.polaroid img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Расстановка по координатам и градусам наклона точно как в Figma */
+.p1 { left: 5%; top: 10px; transform: rotate(-8deg); }
+.p2 { left: 22%; top: -40px; transform: rotate(4deg); width: 200px; }
+.p3 { left: 45%; top: -10px; transform: rotate(-4deg); }
+.p4 { right: 25%; top: -50px; transform: rotate(6deg); width: 190px; }
+.p5 { right: 5%; top: 20px; transform: rotate(-5deg); }
+.p6 { left: 15%; bottom: -30px; transform: rotate(5deg); }
+
+.btn-gallery-top {
+    background: transparent;
+    border: 1px solid #A98A72;
+    padding: 12px 40px;
+    color: #A98A72;
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 6;
+}
+
+/* --- 2. СЕКЦИЯ EVENT TRUE MASTER (Круглый срез картинки) --- */
+.master-section {
+    padding: 8rem 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.master-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.master-text {
+    flex: 1;
+}
+
+.sub-heading {
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    color: #A98A72;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.sub-heading.center {
+    text-align: center;
+}
+
+.master-text h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: #3D312A;
+}
+
+.description {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    color: #6E5D53;
+}
+
+.description-sub {
+    font-size: 0.85rem;
+    color: #8A786E;
+}
+
+.master-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Элегантная форма среза угла у букета роз */
+.bouquet-img-curved {
+    width: 85%;
+    max-width: 450px;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 0 0 0 200px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.04);
+}
+
+/* --- 3. СЕКЦИЯ БЛОГА (NEWER BLOG) --- */
+.blog-section {
+    padding: 6rem 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-main-title {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+}
+
+.blog-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+}
+
+.blog-featured {
+    display: flex;
+    flex-direction: column;
+}
+
+.featured-img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+}
+
+.blog-date {
+    font-size: 0.75rem;
+    color: #A98A72;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.blog-featured h3 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+.blog-side-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.side-item {
+    position: relative;
+    padding-right: 120px;
+    border-bottom: 1px solid rgba(169, 138, 114, 0.2);
+    padding-bottom: 2rem;
+}
+
+.side-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.read-more {
+    font-size: 0.8rem;
+    color: #4A3B32;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.side-item-thumb {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    padding: 5px;
+}
+
+.side-item-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- 4. ПОДВАЛ С КОМАНДОЙ (THANKS TO THE TEAM) --- */
+.team-footer {
+    background-color: #E8DFD7;
+    padding: 5rem 4rem 2rem 4rem;
+    text-align: center;
+}
+
+.footer-nav {
+    margin-bottom: 3rem;
+}
+
+.footer-nav a {
+    color: #4A3B32;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.thanks-title {
+    font-size: 3.5rem;
+    font-style: italic;
+    margin-bottom: 4rem;
+    color: #4A3B32;
+}
+
+.team-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto 4rem auto;
+}
+
+.team-photos {
+    display: flex;
+    gap: 15px;
+}
+
+.team-polaroid {
+    background: #fff;
+    padding: 8px 8px 20px 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+    width: 120px;
+}
+
+.team-polaroid img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+/* Наклоны карточек команды внизу макета */
+.tp1 { transform: rotate(-5deg); }
+.tp2 { transform: rotate(4deg); margin-top: 20px; }
+.tp3 { transform: rotate(-3deg); margin-top: -10px; }
+.tp4 { transform: rotate(6deg); }
+
+.team-info {
+    min-width: 280px;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.designer-box {
+    margin-top: 1.5rem;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    padding-top: 1.5rem;
+}
+
+.copyright {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: #8C7B70;
+    margin-top: 4rem;
+}
+
+/* --- АДАПТИВНОСТЬ К МОБИЛЬНЫМ ЭКРАНАМ --- */
+@media (max-width: 900px) {
+    .master-container { flex-direction: column; text-align: center; }
+    .bouquet-img-curved { border-radius: 0; width: 100%; height: 350px; }
+    .blog-container { grid-template-columns: 1fr; }
+    .team-layout { flex-direction: column; }
+    .main-gallery-title { font-size: 3rem; }
+    .scattered-grid { display: none; } /* Отключаем наслоения на смартфонах для чистоты UI */
+    .gallery-hero { min-height: auto; padding: 4rem 1rem; }
+}
